@@ -1,44 +1,64 @@
-<!DOCTYPE html>
+<?php  session_start(); ?> 
+<?php
+
+/*if(isset($_SESSION['use']))  
+ {
+    header("Location:main.php"); 
+ }
+
+Verifica si el usuario ya se habia loggeado!! 
+
+ */
+
+if(isset($_POST['login']))
+{
+     $user = $_POST['user'];
+     $pass = $_POST['pass'];
+     $postUser = $_SESSION['post-data']['userid'];
+     $postPass = $_SESSION['post-data']['password'];
+
+      if($user == $postUser && $pass == $postPass)  
+         {    
+
+          $_SESSION['use']=$user;
+
+
+         echo '<script type="text/javascript"> window.open("main.php","_self");</script>';
+
+        }
+
+        else
+        {
+            echo "Contraseña o Usuario incorrectos.";        
+        }
+}
+ ?>
 <html>
 <head>
-	<title>Iniciar Sesión</title>
-	<link rel="stylesheet" type="text/css" href="cssMaestro.css">
+
+<title> Login Page   </title>
+
 </head>
+
 <body>
-	<h2>Bienvenido a Kojima Bank</h2>
 
-	
-<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
-		
-		<label>UserID:</label>
-		<input type="text" name="iduser" required size="35"><br>
+<form action="" method="post">
 
-		<label>Password:</label>
-		<input type="text" name="pass" required size="35"><br>
-
-		<input class=" botón" type="submit" name="submit" value="Aceptar">
-	</form>
-
-	<h5><a href="registro.html">Registrate!!</a></h5>
-
-<?php 
-
-include("postForm.php");
- ses
-
-
-if(isset($_POST['submit']))
- 
-{
-
-	$userid = $_POST['iduser'];
-	$Password = $_POST['pass'];
-
-	if ($userid == "userfinal" && $Password == "12345") {
-		
-	}
-
- ?>
+    <table width="200" border="0">
+  <tr>
+    <td>Usuario</td>
+    <td> <input type="text" name="user" > </td>
+  </tr>
+  <tr>
+    <td>Contraseña</td>
+    <td><input type="password" name="pass"></td>
+  </tr>
+  <tr>
+    <td> <input type="submit" name="login" value="LOGIN"></td>
+    <td></td>
+  </tr>
+</table>
+</form>
 
 </body>
 </html>
