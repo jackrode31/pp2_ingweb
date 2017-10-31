@@ -1,0 +1,84 @@
+*------------- Menu Vertical -----------------*
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+ul li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ul li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+*--------------- registro - login --------------------*
+form h3 {
+	font-family: sans-serif;
+	color: green;
+	
+}
+
+form div {
+	margin: .4em 0;
+}
+form input{
+	padding: 4px;
+	margin: 4px;
+}
+form select {
+	padding: 4px;
+	margin: 4px;
+}
+
+form div label {
+	width: 25%;
+	float: left;
+	font-style: bold;
+	padding: 4px;
+	margin: 4px;
+}
+
+
+form h5 {
+	padding-left: 10px;
+}
+
+form span {
+	color: red;
+}
+
+form h4 {
+	color: gray;
+}
+
+div.container{
+ 	margin: auto;
+ 	padding: 10px;
+
+ }
+
+ .botón{
+ 	background-color: green;
+ 	color: black;
+ 	font-family: sans-serif;
+ }
+
+ div.echo {
+ 	padding: 4px;
+ 	margin: 4px;
+ 	color: blue;
+ }
+
+ h6{
+ 	color: green;
+ 	font-style: italic;
+ }
+
+ *-------------------------------------------------------------*
