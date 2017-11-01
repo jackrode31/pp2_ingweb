@@ -29,36 +29,40 @@ if(isset($_POST['login']))
 
         else
         {
-            echo "Contraseña o Usuario incorrectos.";        
+    
+            echo '<script language="javascript">';
+            echo 'alert("Contraseña incorrecta. Recuerde usar los credeciales ingresados en el registro.")';
+            echo '</script>';        
         }
 }
  ?>
+
+<!DOCTYPE html>
 <html>
 <head>
-
-<title> Login Page   </title>
-
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="logincss.css">
 </head>
-
 <body>
 
-<form action="" method="post">
+<h2>Inicia sesión en tu cuenta de Kojima Bank</h2>
 
-    <table width="200" border="0">
-  <tr>
-    <td>Usuario</td>
-    <td> <input type="text" name="user" > </td>
-  </tr>
-  <tr>
-    <td>Contraseña</td>
-    <td><input type="password" name="pass"></td>
-  </tr>
-  <tr>
-    <td> <input type="submit" name="login" value="LOGIN"></td>
-    <td></td>
-  </tr>
-</table>
+<div class="center">
+
+<form method="post">
+  <div class="container">
+    <label><b>Nombre de Usuario</b></label>
+    <input type="text" placeholder="Enter Username" name="user" required>
+
+    <label><b>Contraseña</b></label>
+    <input type="password" placeholder="Enter Password" name="pass" required>
+      
+    <input id="button" type="submit" name="login" value="Iniciar Sesión"></input>
 </form>
+</div>
 
 </body>
+<footer id="main-footer">
+    <p id="footer">Presentado por: Acevedo, Roderik & Tuñón, Carlos</p>
+  </footer> 
 </html>
