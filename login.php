@@ -41,10 +41,6 @@ if(isset($_POST['login']))
 }
 
 
-        if(isset($_POST['registro'])){
-
-      echo '<script type="text/javascript"> window.open("index.html","_self");</script>';
-        }
  ?>
 
 <!DOCTYPE html>
