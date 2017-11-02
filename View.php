@@ -42,12 +42,11 @@ public function __construct()
 	$this->sidebar ='
 
 ';
-	$tmpFooter = '<p><span class="bold"> Hz.tek</span> es un compañia imaginaria desarrollada para el proyecto 1 del curso de Ingenieria Web por los estudiantes:</p>
-		<ul>
-<li>Acevedo, Roderik</li>
-<li>Henriquez, Roy</li>
-<li>Tuñón, Carlos</li>
-</ul>';
+	$tmpFooter = '
+<footer id="main-footer">
+    <p id="footer">Presentado por: Acevedo, Roderik & Tuñón, Carlos</p>
+  </footer> 
+';
 	$this->setFooter($tmpFooter);
 }
         public function getHeader(){
@@ -93,6 +92,7 @@ public function __construct()
     protected function generateNavbar()
     {
 	    $navbar ='    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">  <nav>
+  <h3 class="w3-bar-item">Bienvenido, '.$_SESSION['post-data']['fname']. " ".$_SESSION['post-data']['lname'].'</h3>
 ';
       foreach($this->getNavbarContent() as $link)
       {

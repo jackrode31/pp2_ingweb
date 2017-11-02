@@ -19,7 +19,7 @@ if(!is_null($_SESSION["cuenta"]))
 else
 {
 	
-echo '<script type="text/javascript"> window.open("registrar.html","_self");</script>';
+echo '<script type="text/javascript"> window.open("index.html","_self");</script>';
 }
 switch($_GET["action"])
 {

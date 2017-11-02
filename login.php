@@ -23,7 +23,7 @@ if(isset($_POST['login']))
 
           $_SESSION['use']=$user;
 	  $_SESSION["persona"] = new Person($_SESSION["post-data"]["fname"],$_POST["post-data"]["lname"]);
-	  $_SESION["cuenta"] = new Cuenta($_POST["post-data"]["plata"]);
+	  $_SESSION["cuenta"] = new Cuenta($_SESSION["post-data"]["plata"]);
 
 
          echo '<script type="text/javascript"> window.open("transaccion.php","_self");</script>';

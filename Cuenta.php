@@ -9,7 +9,7 @@ class Cuenta
   private $cantRetiradaHoy = 0;
   public function __construct($monto)
   {
-  	$this->monto = $monto;
+  	$this->setMonto($monto);
   }
   public function getMonto()
   {

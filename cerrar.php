@@ -6,6 +6,6 @@ session_start();
         unset($_SESSION[$key]);
     }
 
-echo '<script type="text/javascript"> window.open("login.php","_self");</script>';
+echo '<script type="text/javascript"> window.open("index.html","_self");</script>';
 
 ?>
