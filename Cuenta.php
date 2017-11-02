@@ -1,5 +1,5 @@
 <?php
-require_once('Transaccion.php');
+require_once('transaccionO.php');
 class Cuenta
 {
   private $monto;

@@ -21,7 +21,16 @@ else
 	
 echo '<script type="text/javascript"> window.open("index.html","_self");</script>';
 }
-switch($_GET["action"])
+if(isset($_GET["action"]))
+{
+
+	$action = $_GET["action"];
+}
+else
+{
+	$action ="";
+}
+switch($action)
 {
 	case "showDepositar":
 	$pTransaccionView = new TransaccionView($person,$cuenta,"depositar",null);
