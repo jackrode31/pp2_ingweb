@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro</title>
+	<link rel="stylesheet" type="text/css" href="cssMaestro.css">
+</head>
+<body>
+
+	
+<div class="container">
+	<h2>Bienvenido a Kojima Bank</h2>
+	<hr>
+
+<form action="postForm.php" method="post">	
+	<h3>Complete con sus datos para obtener su cuenta de Kojima Bank</h3>
+<div>
+<label>Número de cuenta<span class="red">*</span>:</label>
+<input type="text" name="ncuenta"
+required maxlength="25" size="35" placeholder="XXXXX-XXXXX-XXXXX-XXXXX"><br>
+
+<label>Nombre <span class="red">*</span>:</label>
+<input type="text" name="fname" required placeholder="Ricardo" size="35"><br>
+
+<label>Apellido <span class="red">*</span>:</label>
+<input type="text" name="lname" required placeholder="Martinelli" size="35"><br>
+
+<label>UserID<span class="red">*</span>:</label>
+<input type="text" name="userid" required placeholder="ricardin.pty" size="35"><br>
+
+<label>Contraseña<span class="red">*</span>:</label>
+<input type="password" name="password" required placeholder="********" size="35"><br>
+
+<label>Email <span class="red">*</span>:</label>
+<input type="text" name="email" required placeholder="ricardo.martinelli@google.com" size="35"><br>
+
+<label>Teléfono <span class="red">*</span>:</label>
+<input type="text" name="phone" required placeholder="800-5000" size="35"><br>
+
+<label>Dirección:</label> 
+<input type="text" name="address" placeholder="Costa del Este" size="35"><br>
+
+<label>Provincia/Estado:</label>
+<input type="text" name="state" placeholder="Los Santos" size="35"><br>
+
+<label>Capital:</label>
+<input type="text" name="plata" placeholder="No menor a 100.00" size="35"><br>
+
+<h5>Los campos marcados con (<span class="red">*</span>) son obligatorios.</h5>
+<input class=" botón" type="submit" name="submit" value="Enviar">
+
+</div>
+</form>
+
+</div>
+</body>
+</html>
