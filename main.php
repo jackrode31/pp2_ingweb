@@ -31,16 +31,12 @@
     <th>Capital</th>
   </tr>
   <tr>
-    <td><?php session_start(); echo $_SESSION['post-data']['fname']; echo " ".$_SESSION['post-data']['lname']; ?></td>
-    <td><?php session_start(); echo $_SESSION['post-data']['ncuenta']; ?></td>
-    <td><?php session_start(); echo $_SESSION['post-data']['plata']; ?></td>
+    <td><?php  echo $_SESSION['post-data']['fname']; echo " ".$_SESSION['post-data']['lname']; ?></td>
+    <td><?php  echo $_SESSION['post-data']['ncuenta']; ?></td>
+    <td><?php  echo $_SESSION['post-data']['plata']; ?></td>
   </tr>
 </table>
 
-<?php session_start();
-
-
-?>
 
 <footer id="main-footer">
     <p id="footer">Presentado por: Acevedo, Roderik & Tuñón, Carlos</p>
