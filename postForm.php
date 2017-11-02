@@ -1,5 +1,6 @@
 <?php 
-
+require_once("Cuenta.php");
+require_once("person.php");
 session_start();
 if(isset($_POST['submit']))
 {
