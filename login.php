@@ -1,6 +1,7 @@
 <?php  session_start(); ?> 
 <?php
-
+require_once("person.php");
+require_once("Cuenta.php");
 /*if(isset($_SESSION['use']))  
  {
     header("Location:main.php"); 
@@ -21,9 +22,11 @@ if(isset($_POST['login']))
          {    
 
           $_SESSION['use']=$user;
+	  $_SESSION["persona"] = new Person($_SESSION["post-data"]["fname"],$_POST["post-data"]["lname"]);
+	  $_SESION["cuenta"] = new Cuenta($_POST["post-data"]["plata"]);
 
 
-         echo '<script type="text/javascript"> window.open("main.php","_self");</script>';
+         echo '<script type="text/javascript"> window.open("transaccion.php","_self");</script>';
 
         }
 
