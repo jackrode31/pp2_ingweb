@@ -22,44 +22,50 @@ if(isset($_POST['login']))
          {    
 
           $_SESSION['use']=$user;
+	  $_SESSION["persona"] = new Person($_SESSION["post-data"]["fname"],$_POST["post-data"]["lname"]);
+	  $_SESION["cuenta"] = new Cuenta($_POST["post-data"]["plata"]);
 
 
-         echo '<script type="text/javascript"> window.open("main.php","_self");</script>';
+         echo '<script type="text/javascript"> window.open("transaccion.php","_self");</script>';
 
         }
 
         else
         {
-            echo "Contraseña o Usuario incorrectos.";        
+    
+            echo '<script language="javascript">';
+            echo 'alert("Contraseña incorrecta. Recuerde usar los credeciales ingresados en el registro.")';
+            echo '</script>';        
         }
 }
  ?>
+
+<!DOCTYPE html>
 <html>
 <head>
-
-<title> Login Page   </title>
-
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="logincss.css">
 </head>
-
 <body>
 
-<form action="" method="post">
+<h2>Inicia sesión en tu cuenta de Kojima Bank</h2>
 
-    <table width="200" border="0">
-  <tr>
-    <td>Usuario</td>
-    <td> <input type="text" name="user" > </td>
-  </tr>
-  <tr>
-    <td>Contraseña</td>
-    <td><input type="password" name="pass"></td>
-  </tr>
-  <tr>
-    <td> <input type="submit" name="login" value="LOGIN"></td>
-    <td></td>
-  </tr>
-</table>
+<div class="center">
+
+<form method="post">
+  <div class="container">
+    <label><b>Nombre de Usuario</b></label>
+    <input type="text" placeholder="Enter Username" name="user" required>
+
+    <label><b>Contraseña</b></label>
+    <input type="password" placeholder="Enter Password" name="pass" required>
+      
+    <input id="button" type="submit" name="login" value="Iniciar Sesión"></input>
 </form>
+</div>
 
 </body>
+<footer id="main-footer">
+    <p id="footer">Presentado por: Acevedo, Roderik & Tuñón, Carlos</p>
+  </footer> 
 </html>

@@ -14,7 +14,13 @@ class Person {
   private $userId;
   private $phone;
   
+  public function __construct($nom,$apellido)
+  {
+  	$this->name = $nom;
+	$this->lastName = $apellido;
 
+  
+  }
 
   public function withArray($persona)
   {

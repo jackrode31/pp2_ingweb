@@ -7,6 +7,10 @@ class Cuenta
   private $nTransferencias = 0;
   private $transacciones = array() ;
   private $cantRetiradaHoy = 0;
+  public function __construct($monto)
+  {
+  	$this->monto = $monto;
+  }
   public function getMonto()
   {
 	return $this->monto;

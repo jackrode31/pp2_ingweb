@@ -1,4 +1,4 @@
-*------------- Menu Vertical -----------------*
+*------------- Menu Vertical by W3-----------------*
 ul {
     list-style-type: none;
     margin: 0;
@@ -89,3 +89,51 @@ div.error
 
 }
  *-------------------------------------------------------------*
+
+
+ *--------------------------/*Footer always at bottom*/--------------------------------*
+p.footer {
+    margin: 0 0 1.5em 0;
+  }
+
+#main-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: gray;
+  text-align: center;
+}
+
+  #main-footer p {
+    margin: 0;
+    color: white
+  }
+  
+*--------------------------------Main DATA----------------------------------*
+#userdata {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#userdata td, #userdata th {
+
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#userdata tr:nth-child(even){background-color: #f2f2f2;}
+
+#userdata tr:hover {background-color: #ddd;}
+
+#userdata th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color: rgb(86,99,71);
+    color: white;
+    width: 65%;
+}
+

@@ -2,23 +2,24 @@
 require_once("person.php");
 require_once("Cuenta.php");
 require_once("transaccionView.php");
-$person = new Person();
+/*$person = new Person();
 $person->withArray2([
 	"name" => "Carlos",
 	"lastName" => "Tuñón",
 	"userId" => "PepeTrump",
 	"password" => "Rare"
 
-]);
+]);*/
 session_start();
 if(!is_null($_SESSION["cuenta"]))
 {
 	$cuenta = $_SESSION["cuenta"];
+	$person = $_SESSION["persona"];
 }
 else
 {
-	$cuenta = new Cuenta;
-	$cuenta->setMonto(400);
+	
+echo '<script type="text/javascript"> window.open("registrar.html","_self");</script>';
 }
 switch($_GET["action"])
 {
@@ -65,7 +66,10 @@ switch($_GET["action"])
 		{
 			$pTransaccionView = new TransaccionView($person,$cuenta,"transferir",null);
 		}
-	break;
+		break;
+	default :
+		$pTransaccionView = new TransaccionView($person,$cuenta,null,null);
+		break;
 }
 $_SESSION["cuenta"] = $cuenta;
 $pTransaccionView->render();
