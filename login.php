@@ -27,7 +27,8 @@ if(isset($_POST['login']))
 
         }
 
-        else
+    
+          else
         {
     
             echo '<script language="javascript">';
@@ -35,6 +36,12 @@ if(isset($_POST['login']))
             echo '</script>';        
         }
 }
+
+
+        if(isset($_POST['registro'])){
+
+      echo '<script type="text/javascript"> window.open("index.html","_self");</script>';
+        }
  ?>
 
 <!DOCTYPE html>
@@ -57,7 +64,8 @@ if(isset($_POST['login']))
     <label><b>Contraseña</b></label>
     <input type="password" placeholder="Enter Password" name="pass" required>
       
-    <input id="button" type="submit" name="login" value="Iniciar Sesión"></input>
+    <input id="button" type="submit" name="login" value="Iniciar Sesión">
+    <input id="button" type="submit" name="registro" value="¿No te has registrado? Hazlo aquí!" onclick = "location='index.html'"/>
 </form>
 </div>
 
