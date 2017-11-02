@@ -1,6 +1,7 @@
 <?php  session_start(); ?> 
 <?php
-
+require_once("person.php");
+require_once("Cuenta.php");
 /*if(isset($_SESSION['use']))  
  {
     header("Location:main.php"); 
